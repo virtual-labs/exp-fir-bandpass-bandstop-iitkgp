@@ -2,12 +2,29 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "The roots of the equation H(z) must occur in ________________",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Identical",
+        "b": "Zero",
+        "c": "Reciprocal pairs",
+        "d": "Conjugate pairs"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the value of h(M-1/2) if the unit sample response is anti-symmetric?",
+      "answers": {
+        "a": "0",
+        "b": "1",
+        "c": "-1",
+        "d": " None of the mentioned"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -19,12 +36,46 @@
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What is the number of filter coefficients that specify the frequency response for h(n) symmetric?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "(M-1)/2 when M is even and M/2 when M is odd",
+        "b": "(M-1)/2 when M is odd and M/2 when M is even",
+        "c": "(M+1)/2 when M is even and M/2 when M is odd",
+        "d": "(M+1)/2 when M is odd and M/2 when M is even"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the number of filter coefficients that specify the frequency response for h(n) anti-symmetric?",
+      "answers": {
+        "a": "(M-1)/2 when M is even and M/2 when M is odd",
+        "b": "(M-1)/2 when M is odd and M/2 when M is even",
+        "c": "(M+1)/2 when M is even and M/2 when M is odd",
+        "d": "(M+1)/2 when M is odd and M/2 when M is even"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is not suitable either as low pass or a high pass filter?",
+      "answers": {
+        "a": "h(n) symmetric and M odd",
+        "b": "h(n) symmetric and M even",
+        "c": "h(n) anti-symmetric and M odd",
+        "d": "h(n) anti-symmetric and M even"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
