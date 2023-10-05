@@ -1,13 +1,212 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
-</body>
+
+<html lang="en" dir="ltr">
+  <head>
+    <title>Study of FIR filter design using window method:Bandpass and Bandstop</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/adi.css">
+    <link rel="stylesheet" href="./css/adik.css">
+	<!--  <link rel="stylesheet" href="styles.css"> -->
+    <!--
+    This HTML file is designed and developed by
+    Aditya Kameswara Rao Nandula
+    Senior Research Fellow,
+    Virtual Labs IIT Kharagpur.
+    LinkedIn: https://www.linkedin.com/in/akraonandula/
+    Updated on: 06-05-2022
+  -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71919978-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-71919978-6');
+</script>
+  </head>
+  <body>
+    <div class="container ce">
+      <div class="container">
+        <div class="row">&nbsp;</div>
+        <div class="row">
+          <div class="col-sm-12">
+            <header>
+              <div class="row ce ">
+                <div class="col-sm-3 "> <img src="./images/vlabs.png" class="img-fluid pi1"
+                    alt="VLabs Logo">
+                  </div>
+                <div class="col-sm-6  tex">
+                  <h1><strong> Virtual Labs <br>
+                      IIT Kharagpur</strong></h1>
+                </div>
+                <div class="col-sm-3 ">
+                   <img src="./images/iitkgp.png" class=" img-fluid pi2" alt="IIT Kharagpur Logo">
+                </div>
+              </div>
+
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h3>Study of FIR filter design using window method:Bandpass and Bandstop</h3>
+                </div>
+              </div>
+              <hr>
+            </header>
+          </div>
+        </div>
+        <div class="container ce">
+          <div class="row bg-secondary text-white p-3 my-3">
+            <div id="qqd" class="col-sm-3"></div>
+            <div class="col-sm-6"></div>
+            <!--<div  id="qqsc" class="col-sm-3"></div>-->
+            <div id="qqt" class="col-sm-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="container" id="cont">
+        <div class="row Insta ce">
+        <div class="col-sm-12">
+          <div class"container Inst">
+            <ol class="se">
+              <p class="ce Inst"><strong> Instructions</p> </strong>
+              <li class="se">Select FIR from Type </li>
+              <li class="se">Select the sampling frequency (F<sub>s</sub>),centre frequency (F<sub>c</sub>)and centre frequency(F<sub>c2</sub> of the input signal.</li>
+              <li class="se">Put the value of FIR filter order from FIR order tab,select filter type from Calculation sinc Bandpass or sinc Bandstop and attenuation(dB)</li>
+              <li class="se">Click on the "Calculate" buttton to observe the Magnitude,Group delay,Impulse Response and simulation on plot</li>
+              <li><strong>
+                Note:
+                <ul>
+                  <li>Make sure FIR order in range of 1 to 100</li>
+                </ul>
+                </strong>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+<!--   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>fili</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+  </head> -->
+
+  <body>
+    Type:
+    <select id="seltype">
+      <option value="iir">IIR</option>
+      <option value="fir">FIR</option>
+    </select><br>
+    Fs:
+    <input id="fs_val" type="text" name="fsval">
+    Fc:
+    <input id="fc_val" type="text" name="fcval">
+    Fc2:
+    <input id="fc2_val" type="text" value="200"><br>
+    <br> Biquad cascades:
+    <input id="iir_val" type="text" name="iirval"><br>
+    Transform: <select id="seltrans">
+      <option value="bilinear">bilinear</option>
+      <option value="matchedz">matchedZ</option>
+    </select><br>
+    Bilinear Characteristic: <select id="bilinearchar">
+      <option value="bessel3dB">Bessel 3dB</option>
+      <option value="bessel1dB">Bessel 1dB</option>
+      <option value="butterworth">Butterworth</option>
+    </select>
+    Bilinear Type: <select id="bilineartype">
+      <option value="lowpass">Lowpass</option>
+      <option value="highpass">Highpass</option>
+      <option value="bandpass">Bandpass</option>
+      <option value="bandstop">Bandstop</option>
+      <option value="peak">Peak</option>
+      <option value="lowshelf">Lowshelf</option>
+      <option value="highshelf">Highshelf</option>
+      <option value="lowpassBT">Lowpass BT</option>
+      <option value="highpassBT">Highpass BT</option>
+      <option value="aweighting">A Weighting</option>
+    </select><br>
+    MatchedZ Characteristic: <select id="matchedzchar">
+      <option value="bessel">Bessel</option>
+      <option value="butterworth">Butterworth</option>
+      <option value="tschebyscheff05">Tschebyscheff 0.5dB</option>
+      <option value="tschebyscheff1">Tschebyscheff 1dB</option>
+      <option value="tschebyscheff2">Tschebyscheff 2dB</option>
+      <option value="tschebyscheff3">Tschebyscheff 3dB</option>
+      <option value="allpass">Allpass</option>
+    </select><br> Impulse Response Length:
+    <input id="buir_val" type="text" name="beirval"><br>
+    preGain: <input id="pregain" type="checkbox" value="enable">
+    Gain (dB): <input id="gain" type="text" value="0"><br><br>
+    FIR order:
+    <input id="fir_val" type="text" name="firval">
+    Calculation <select id="firtype">
+      <!-- <option value="sinc_lp">Sinc Lowpass</option>
+      <option value="sinc_hp">Sinc Highpass</option> -->
+      <option value="sinc_bp">Sinc Bandpass</option>
+      <option value="sinc_bs">Sinc Bandstop</option>
+      <option value="kb">Kaiser-Bessel</option>
+    </select> Attenuation (dB):
+    <input id="firatt" type="text" value="100">
+    <br>
+    <br>
+    <input id="f_sim" type="button" value="calculate">
+    <br>
+    <br>Magnitude Percent
+    <div id="iirmag3d" style="width:600px;height:350px;"></div>
+    <br>
+    <br>Magnitude dB
+    <div id="iirbmag3d" style="width:600px;height:350px;"></div>
+    <br>
+    <br>Group Delay
+    <div id="iirgroup3d" style="width:600px;height:350px;"></div>
+    <br>
+    <br>Impulse Response
+    <div id="iirimp3d" style="width:600px;height:350px;"></div>
+    <br>
+    <br>PoleZero
+    <div id="iirpz3d" style="width:350px;height:350px;"></div>
+    <br>
+    <span id="iirtxt">a</span>
+    <br>
+    <br> Input
+    <input id="in_val" type="text" name="inval">
+    <br>
+    <br>Run
+    <input id="f_run" type="button" value="run">
+    <br>
+    <br>Simulation
+    <div id="unrun3d" style="width:600px;height:300px;"></div>
+    <br>
+    Coefficients:<br>
+    <span id="coefftxt">a</span>
+    <br>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="fili.js"></script>
+	<script src="d3draw.js"></script>
+    <script src="src.js"></script>
+	<script src="./src/calCascades.js"></script>
+	<script src="./src/fft.js"></script>
+	<script src="./src/firCoeffs.js"></script>
+	<script src="./src/firFilter.js"></script>
+	<!-- <script src="./src/iirCoeffs.js"></script> -->
+	<!-- <script src="./src/iirFilter.js"></script> -->
+	<script src="./src/testFilter.js"></script>
+	<!-- <script src="./src/iir.js"></script> -->
+
+	
+
+  </body>
+
 </html>

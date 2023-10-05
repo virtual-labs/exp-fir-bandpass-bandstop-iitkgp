@@ -1,0 +1,126 @@
+.p1 rect {
+  fill: #57C7B6;
+}
+
+.p1 g polygon {
+  opacity: 1;
+}
+
+.p1 circle {
+  fill: rgba(13, 63, 193, 1);
+  stroke: rgba(1, 3, 23, 1);
+  stroke-width: 2;
+  filter: url(#dropshadow);
+}
+
+.p1 text {
+  font-size: 10px;
+  fill: #57C7B6;
+  font-family: sans-serif;
+  font-weight: 30;
+  -webkit-transition: all .1s ease-in-out;
+}
+
+.p1 text.active {
+  font-size: 15px;
+  -webkit-transition: all .3s ease-in-out;
+    font-weight: bold;
+}
+
+.scale .active{
+  fill: red;
+}
+html {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: blue;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1px;
+}
+
+.grid {
+  fill: none;
+  shape-rendering: crispEdges;
+  stroke: #eee;
+  stroke-width: 1px;
+}
+
+.area {
+  fill: steelblue;
+  opacity: 0.25;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.hover {
+  shape-rendering: crispEdges;
+  fill: none;
+  stroke: lightgrey;
+  stroke-width: 1px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.circle {
+  fill: steelblue;
+  transition: opacity 0.2s;
+  /*opacity: 0;*/
+}
+
+.cross {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+.zero {
+  fill: none;
+  pointer-events: all;
+  stroke-width: 2px;
+}
+
+/* rect {
+  fill: steelblue;
+  transition: opacity 0.2s;
+   /*opacity: 0;} */
+
+
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis line,
+.axis circle {
+  fill: none;
+  stroke: #777;
+  stroke-dasharray: 1,4;
+}
+
+.axis :last-of-type circle {
+  stroke: #333;
+  stroke-dasharray: none;
+}
