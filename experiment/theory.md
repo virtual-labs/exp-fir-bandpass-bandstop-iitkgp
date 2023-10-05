@@ -18,7 +18,7 @@
                                 is not to achieve ideal characteristics, as it is impossible anyway, but to achieve sufficiently good characteristics of a 
                                 filter. The transfer function of FIR filter approaches the ideal as the filter order increases, thus increasing the 
                                 complexity and amount of time needed for processing input samples of a signal being filtered.
-                             <center><img style="width:331px;height:239px;" src="../images/exp8/pic-8.png" alt="" /><br/>
+                             <center><img style="width:331px;height:239px;" src="images/pic-8.png" alt="" /><br/>
                                  Fig-1 </center>
                             <p class="heading-content">FIR filters can have linear phase characteristic, which is not like IIR filters. Obviously, in such 
                                 cases when it is necessary
@@ -44,14 +44,14 @@
                                 that without being familiar with these concepts, it is not possible to understand analyses and synthesis of digital 
                                 filters.</p>
                             <p class="heading-content">Figure 2.a and 2.b illustrates a band-pass filter specification.
-                           <center><img style="width:331px;height:224px;" src="../images/exp8/pic-1.png" alt="" /><br/>
+                           <center><img style="width:331px;height:224px;" src="images/pic-1.png" alt="" /><br/>
                                    Figure 2.a: Low-pass digital filter specification</center>
-                             <center><img style="width:374px;height:228px;" src="../images/exp8/pic-2.png" alt="" /><br/>
+                             <center><img style="width:374px;height:228px;" src="images/pic-2.png" alt="" /><br/>
                                   Figure 2.b: Low-pass digital filter specification</center> 
                             <p class="heading-content">Figure 3.a and 3.b illustrates a band-stop digital filter specification.</p>
-                                <center><img style="width:340px;height:229px;" src="../images/exp9/img4.png" alt="" /><br/>
+                                <center><img style="width:340px;height:229px;" src="images/img4.png" alt="" /><br/>
                                   Figure 3.a: Band-stop digital filter specification</center>
-                           <center><img style="width:372px;height:221px;" src="../images/exp9/img5.png" alt="" /><br/>
+                           <center><img style="width:372px;height:221px;" src="images/img5.png" alt="" /><br/>
                                  Figure 3.b: Band-stop digital filter specification</center>
                             <p class="heading-content">Finite impulse response (FIR) filter design methods</p>
                             <p class="heading-content">The filter design process starts with specifications and requirements of the desirable FIR filter. Which method is 
@@ -71,11 +71,11 @@
                                 performed in a finite number of points. As the ideal filter frequency response is infinite, it is easy to produce sampling 
                                 errors. The error is less as the filter order increases. 
                                 <p>Figure 4.a and 4.b: Transfer functions of two standard ideal filters.</p>
-                            <center><img style="width:524px;height:250px;" src="../images/exp9/img6.png" alt="" /><br/>
+                            <center><img style="width:524px;height:250px;" src="images/img6.png" alt="" /><br/>
                                 Figure 4.a and 4.b: Transfer functions of two standard ideal filters</center>
                             <p class="heading-content">The ideal filter frequency response can be computed via inverse Fourier transform. The two standard ideal filters frequency 
                                 responses are contained in the table 1 below.</p>
-                        <center><img style="width:682px;height:228px;" src="../images/exp9/img7.png" alt="" /><br/>
+                        <center><img style="width:682px;height:228px;" src="images/img7.png" alt="" /><br/>
                                    Table 1: The frequency responses of two standard ideal filters</center>
                             <p class="heading-content">The value of variable n ranges between 0 and N, where N is the filter order. A constant M can be expressed as M = N / 2. 
                                 Equivalently, N can be expressed as N = 2M</p>
@@ -126,7 +126,7 @@
                                 of designed filter and reestimate the transfer function as well. If the transition region is narrower than needed, the 
                                 filter order can be decreased for the purpose of optimizing hardware and/or software resources. It is also necessary to 
                                 reestimate the filter frequency coefficients after that. For the sake of precise estimates, the filter order should be decreased or increased by 1. </p>
-                            <p class="heading-content">Window functions</p>
+                            <p>Window functions</p>
                             <p class="heading-content">The window method is most commonly used method for designing FIR filters. The simplicity of design 
                                 process makes this method 
                                 very popular</p>
@@ -206,22 +206,23 @@
                                             </table>
                             
                            
-                            <p class="heading-content">Special attention should be paid to the fact that minimum attenuation of window function and that of the filter designed 
+                            <p>Special attention should be paid to the fact that minimum attenuation of window function and that of the filter designed 
                                 using that function are different in most cases. The difference, i.e. additional attenuation occurs under the process of
                                 designing a filter using window functions. This affects the stop band attenuation to become additionally higher, which is very desirable.</p>
-                            <p class="heading-content">However, a drawback of this method is that the minimum stop band attenuation is fixed for each function. The following 
+                            <p>However, a drawback of this method is that the minimum stop band attenuation is fixed for each function. The following 
                                 concepts such as the main lobe, main lobe width, side lobes, transition region, minimum stopband attenuation of window function and minimum stopband 
                                 attenuation of designed filter are described in more detail in Figure 5.</p>
-                             <center><img style="width:691px;height:261px;" src="../images/exp9/img13.png" alt="" /><br/>
+                             <center><img style="width:691px;height:261px;" src="images/img13.png" alt="" /><br/>
                                    Figure 5: Main lobe, main lobe width, side lobes, transition region</center>
-                            <p class="heading-content">As can be seen in the table 2 above, the stopband attenuation of these windows is not adjustable. It is only possible to 
+                            <p>As can be seen in the table 2 above, the stopband attenuation of these windows is not adjustable. It is only possible to 
                                 affect the transition region by increasing the filter order. For this reason it is preferable to start design process by 
                                 specifying the appropriate window function on the basis of the stopband attenuation. It is most preferable to specify a
                                 window with the least stopband attenuation that satisfies the given requirements. This enables the designed filter to have the narrowest transition region.</p>
-                               <p class="content" ><center><img style="width:662px;height:310px;" src="../images/exp8/pic-10.png" alt="" />
-                            <p class="heading-content">Frequency Response and Weight Values of different windows types</p>
-                            <p class="content" ><center><img style="width:667px;height:224px;" src="../images/exp8/pic-11.png" alt="" />
-                            <p class="heading-content">This image is taken from  http://www.labbookpages.co.uk/audio/firWindowing.html</p>
+                               <center><img style="width:662px;height:310px;" src="images/pic-10.png" alt="" /></center>
+                            Frequency Response and Weight Values of different windows types</p>
+                           <center><img style="width:667px;height:224px;" src="images/pic-11.png" alt="" /></center>
+
+                            <p>This image is taken from  http://www.labbookpages.co.uk/audio/firWindowing.html</p>
                         </div>
 
 
