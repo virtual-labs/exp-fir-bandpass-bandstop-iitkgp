@@ -153,9 +153,6 @@ selectivity and stop band attenuation</p>
 
 <center><img style="width:682px;height:228px;" src="images/table.png" alt="" /><br/>
 
-
-
-
 <p>Special attention should be paid to the fact that minimum attenuation of window function and that of the filter designed 
 using that function are different in most cases. The difference, i.e. additional attenuation occurs under the process of
 designing a filter using window functions. This affects the stop band attenuation to become additionally higher, which is very desirable.</p>
@@ -169,7 +166,7 @@ affect the transition region by increasing the filter order. For this reason it 
 specifying the appropriate window function on the basis of the stopband attenuation. It is most preferable to specify a
 window with the least stopband attenuation that satisfies the given requirements. This enables the designed filter to have the narrowest transition region.</p>
 <center><img style="width:662px;height:310px;" src="images/pic-10.png" alt="" /></center>
-Frequency Response and Weight Values of different windows types</p>
+Frequency Response and Weight Values of different windows types</p><br/>
 <center><img style="width:667px;height:224px;" src="images/pic-11.png" alt="" /></center>
 
 <p>This image is taken from  http://www.labbookpages.co.uk/audio/firWindowing.html</p>
