@@ -2,12 +2,12 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "The anti-symmetric condition with M even is not used in the design of which of the following linear-phase FIR filter?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Low pass",
+        "b": "High pass",
+        "c": "Band pass",
+        "d": "Bans stop"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -19,12 +19,63 @@
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "FIR stands for ____?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Finite Impulse Filter",
+        "b": "Infinite Impulse Filter",
+        "c": "Finite Impedance Filter",
+        "d": "Finite Impulse Fire"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "FIR filters operate on ___ type of input values?",
+      "answers": {
+        "a": "Present",
+        "b": "Past",
+        "c": "Next",
+        "d": "Both a and b"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "A spot frequency from a signal can be rejected by _______",
+      "answers": {
+        "a": "Low pass filter",
+        "b": "Band pass filter",
+        "c": "Notch filter",
+        "d": "High pass filter"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In the Butterworth first order filter, the gain rolls off at the rate-",
+      "answers": {
+        "a": "-3 dB/decade",
+        "b": "-10 dB/decade",
+        "c": "-20 dB/decade",
+        "d": "-40 dB/decade"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
